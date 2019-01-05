@@ -7,8 +7,23 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1976d2">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./assets/styles/boot.css" rel="stylesheet">
 </head>
 <body>
-  <app-root></app-root>
+  <ziv-root>
+    <div class="ziv-init-container">
+      <div class="ziv-spinner-container">
+        <!-- <img class="ziv-boot-logo" src="./assets/images/spinner-logo.jpg"> -->
+        <svg class="ziv-spinner" viewBox="25 25 50 50">
+          <circle class="ziv-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
+      </div>
+    </div>
+  </ziv-root>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 </html>
