@@ -1,4 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+/**
+  * Import common classes
+  */
+@import './assets//styles//reset.common.css';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/*
+ * Import material theming as this is neccessary to correctly resolve material theming on top level.
+ */
+@import '~@angular/material/theming';
+
+/*
+ * Include the base styles for Angular Material core. We include this here so that you only
+ * have to load a single css file for Angular Material in your app.
+ */
+@include mat-core();
+
+/*
+ * Include theme styles for core and each component used in your app.
+ * Alternatively, you can import and @include the theme mixins for each module/component that you are using.
+ */
+@import './assets/themes/amber.theme.scss';
+
+/*
+ * Set initial theme
+ */
+@include angular-material-theme($ziv-amber-theme);
+
+/*
+ * Import application module themes. Specific modules/component themes shoud be defined in module.theme.scss file.
+ */
+// @import './app/authentication/authentication.module.theme.scss';
+
+.ziv-amber-theme {
+  // @include authentication-module-theme($ziv-amber-theme);
+}
