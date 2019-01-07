@@ -7,7 +7,9 @@ import * as fromPublicUser from './public-user.reducer';
 
 import { IApplicationState, IRouterStateUrl } from '../../models';
 
-
+/**
+ * Core application reducers
+ */
 export const applicationCoreReducers: ActionReducerMap<IApplicationState> = {
   publicUser: fromPublicUser.publicUserReducer,
   routerState: fromRouter.routerReducer
