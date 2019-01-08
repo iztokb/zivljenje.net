@@ -3,6 +3,7 @@ import * as fromPublicUser from '../actions/public-user.actions';
 import { IPublicUser } from '../../models';
 
 export const PUBLIC_USER_INITIAL_STATE: IPublicUser = {
+  cookieConsent: null,
   languageCode: 'sl-SI'
 };
 
@@ -25,7 +26,8 @@ export function publicUserReducer(state = PUBLIC_USER_INITIAL_STATE, action: fro
   }
 }
 
-/**
+/*
  * Export slices
  */
+export const cookieConsent = (state: IPublicUser) => state.cookieConsent;
 export const languageCode = (state: IPublicUser) => state.languageCode;

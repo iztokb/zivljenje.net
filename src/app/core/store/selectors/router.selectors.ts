@@ -8,13 +8,13 @@ import { IRouterStateUrl } from '../../models';
  * @description
  * Get router state selector
  */
-export const getRouterState$ = createSelector(fromCore.getRouterState$, state => state.state);
+export const getRouterState$ = createSelector(fromCore.getCoreRouterState$, state => state.state);
 
 /**
  * @description
  * Get router navigationId
  */
-export const getRouterNavigationId$ = createSelector(fromCore.getRouterState$, state => state.navigationId)
+export const getRouterNavigationId$ = createSelector(fromCore.getCoreRouterState$, state => state.navigationId)
 
 /**
  * @description

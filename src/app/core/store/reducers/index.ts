@@ -5,7 +5,7 @@ import { environment } from '../../../../environments/environment';
 import * as fromRouter from '@ngrx/router-store';
 import * as fromPublicUser from './public-user.reducer';
 
-import { IApplicationState, IRouterStateUrl } from '../../models';
+import { IApplicationState, IRouterStateUrl, IPublicUser } from '../../models';
 
 /**
  * Core application reducers
@@ -17,5 +17,6 @@ export const applicationCoreReducers: ActionReducerMap<IApplicationState> = {
 
 export const metaReducers: MetaReducer<IApplicationState>[] = !environment.production ? [storeFreeze] : [];
 
-export const getRouterState$ = createFeatureSelector<fromRouter.RouterReducerState<IRouterStateUrl>>('routerState');
+export const getCoreRouterState$ = createFeatureSelector<fromRouter.RouterReducerState<IRouterStateUrl>>('routerState');
+export const getCorePublicUserState$ = createFeatureSelector<IPublicUser>('publicUser');
 
