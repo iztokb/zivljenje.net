@@ -8,6 +8,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
 import { AppRoutingModule } from './app-routing.module';
+import { ZivCoreModule } from './core/ziv-core.module';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 
@@ -38,7 +39,8 @@ import { CustomSerializer } from './core/utils/router-serializer.util'
       serializer: CustomSerializer
     }),
     // Application modules
-    AppRoutingModule
+    AppRoutingModule,
+    ZivCoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

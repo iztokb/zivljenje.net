@@ -10,5 +10,6 @@ export type LanguageCode = 'sl-SI' | 'en-US';
  * Public user interface
  */
 export interface IPublicUser {
-  languageCode: LanguageCode
+  cookieConsent: boolean;
+  languageCode: LanguageCode;
 }
